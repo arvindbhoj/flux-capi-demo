@@ -1,8 +1,6 @@
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: MachineDeployment
 metadata:
-  annotations:
-    machinedeployment.clusters.x-k8s.io/revision: "1"
   labels:
     cluster.x-k8s.io/cluster-name: dkp-demo
   name: dkp-demo-md-0
@@ -12,8 +10,6 @@ metadata:
     kind: Cluster
     name: dkp-demo
     uid: d497588c-dc56-40a3-a1c0-343ac35305e4
-  resourceVersion: "2068578"
-  uid: 515541ad-f550-4275-bc41-2b8a03a00b68
 spec:
   clusterName: dkp-demo
   minReadySeconds: 0
