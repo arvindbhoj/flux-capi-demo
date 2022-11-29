@@ -1,10 +1,106 @@
-apiVersion: cluster.x-k8s.io/v1beta1
 kind: MachineDeployment
 metadata:
   annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"cluster.x-k8s.io/v1beta1","kind":"MachineDeployment","metadata":{"annotations":{"machinedeployment.clusters.x-k8s.io/revision":"1"},"labels":{"cluster.x-k8s.io/cluster-name":"dkp-demo"},"name":"dkp-demo-md-0","namespace":"default","ownerReferences":[{"apiVersion":"cluster.x-k8s.io/v1beta1","kind":"Cluster","name":"dkp-demo","uid":"d497588c-dc56-40a3-a1c0-343ac35305e4"}],"resourceVersion":"2068578","uid":"515541ad-f550-4275-bc41-2b8a03a00b68"},"spec":{"clusterName":"dkp-demo","minReadySeconds":0,"progressDeadlineSeconds":600,"replicas":4,"revisionHistoryLimit":1,"selector":{"matchLabels":{"cluster.x-k8s.io/cluster-name":"dkp-demo","cluster.x-k8s.io/deployment-name":"dkp-demo-md-0"}},"strategy":{"rollingUpdate":{"maxSurge":1,"maxUnavailable":0},"type":"RollingUpdate"},"template":{"metadata":{"labels":{"cluster.x-k8s.io/cluster-name":"dkp-demo","cluster.x-k8s.io/deployment-name":"dkp-demo-md-0"}},"spec":{"bootstrap":{"configRef":{"apiVersion":"bootstrap.cluster.x-k8s.io/v1beta1","kind":"KubeadmConfigTemplate","name":"dkp-demo-md-0"}},"clusterName":"dkp-demo","infrastructureRef":{"apiVersion":"infrastructure.cluster.x-k8s.io/v1beta1","kind":"VSphereMachineTemplate","name":"dkp-demo-md-0"},"version":"v1.23.12"}}}}
     machinedeployment.clusters.x-k8s.io/revision: "1"
+  creationTimestamp: "2022-11-22T18:11:55Z"
+  generation: 1
   labels:
     cluster.x-k8s.io/cluster-name: dkp-demo
+  managedFields:
+  - apiVersion: cluster.x-k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:cluster.x-k8s.io/cluster-name: {}
+      f:spec:
+        .: {}
+        f:clusterName: {}
+        f:minReadySeconds: {}
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:cluster.x-k8s.io/cluster-name: {}
+            f:cluster.x-k8s.io/deployment-name: {}
+        f:strategy:
+          .: {}
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          .: {}
+          f:metadata:
+            .: {}
+            f:labels:
+              .: {}
+              f:cluster.x-k8s.io/cluster-name: {}
+              f:cluster.x-k8s.io/deployment-name: {}
+          f:spec:
+            .: {}
+            f:bootstrap:
+              .: {}
+              f:configRef:
+                .: {}
+                f:apiVersion: {}
+                f:kind: {}
+                f:name: {}
+            f:clusterName: {}
+            f:infrastructureRef:
+              .: {}
+              f:apiVersion: {}
+              f:kind: {}
+              f:name: {}
+            f:version: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2022-11-22T18:11:55Z"
+  - apiVersion: cluster.x-k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machinedeployment.clusters.x-k8s.io/revision: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d497588c-dc56-40a3-a1c0-343ac35305e4"}:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:status:
+        .: {}
+        f:availableReplicas: {}
+        f:conditions: {}
+        f:observedGeneration: {}
+        f:phase: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:selector: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: manager
+    operation: Update
+    time: "2022-11-22T19:20:35Z"
+  - apiVersion: cluster.x-k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2022-11-29T06:00:54Z"
   name: dkp-demo-md-0
   namespace: default
   ownerReferences:
@@ -12,7 +108,7 @@ metadata:
     kind: Cluster
     name: dkp-demo
     uid: d497588c-dc56-40a3-a1c0-343ac35305e4
-  resourceVersion: "2068578"
+  resourceVersion: "6180296"
   uid: 515541ad-f550-4275-bc41-2b8a03a00b68
 spec:
   clusterName: dkp-demo
