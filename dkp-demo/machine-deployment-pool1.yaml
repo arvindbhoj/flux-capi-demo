@@ -2,6 +2,95 @@ apiVersion: cluster.x-k8s.io/v1beta1
 kind: MachineDeployment
 metadata:
   annotations:
+    machinedeployment.clusters.x-k8s.io/revision: "1"
+  creationTimestamp: "2022-11-22T18:11:55Z"
+  generation: 1
+  labels:
+    cluster.x-k8s.io/cluster-name: dkp-demo
+  managedFields:
+  - apiVersion: cluster.x-k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:cluster.x-k8s.io/cluster-name: {}
+      f:spec:
+        .: {}
+        f:clusterName: {}
+        f:minReadySeconds: {}
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:cluster.x-k8s.io/cluster-name: {}
+            f:cluster.x-k8s.io/deployment-name: {}
+        f:strategy:
+          .: {}
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          .: {}
+          f:metadata:
+            .: {}
+            f:labels:
+              .: {}
+              f:cluster.x-k8s.io/cluster-name: {}
+              f:cluster.x-k8s.io/deployment-name: {}
+          f:spec:
+            .: {}
+            f:bootstrap:
+              .: {}
+              f:configRef:
+                .: {}
+                f:apiVersion: {}
+                f:kind: {}
+                f:name: {}
+            f:clusterName: {}
+            f:infrastructureRef:
+              .: {}
+              f:apiVersion: {}
+              f:kind: {}
+              f:name: {}
+            f:version: {}
+    manager: kustomize-controller
+    operation: Apply
+    time: "2022-11-22T18:11:55Z"
+  - apiVersion: cluster.x-k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machinedeployment.clusters.x-k8s.io/revision: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d497588c-dc56-40a3-a1c0-343ac35305e4"}:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:status:
+        .: {}
+        f:availableReplicas: {}
+        f:conditions: {}
+        f:observedGeneration: {}
+        f:phase: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:selector: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: manager
+    operation: Update
+    time: "2022-11-22T19:20:35Z"
   name: dkp-demo-md-0
   namespace: default
   ownerReferences:
@@ -9,7 +98,7 @@ metadata:
     kind: Cluster
     name: dkp-demo
     uid: d497588c-dc56-40a3-a1c0-343ac35305e4
-  resourceVersion: "6180296"
+  resourceVersion: "6197559"
   uid: 515541ad-f550-4275-bc41-2b8a03a00b68
 spec:
   clusterName: dkp-demo
